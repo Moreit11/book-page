@@ -118,14 +118,26 @@ html {
 --space-sect--hor: var(--space-xs);
 
 /*Grid styles*/
-
---grid-max-width: 65.88rem;
---grid-gutter: var(--space-s-l, clamp(0.9375rem, 0.465rem + 2.5199vw, 2.125rem));
---grid-columns: 12;
-
+--grid-l-col: repeat(auto-fit, minmax( min(40rem, 100%) , 1fr));
+--grid-m-col: repeat(auto-fit, minmax( min(30rem, 100%) , 1fr));
+--grid-s-col: repeat(auto-fit, minmax( min(20rem, 100%) , 1fr));
 
 }
-
+.grid-l-col {
+    display: grid;
+    grid-template-columns: var(--grid-l-col);
+    gap: var(--space-l); 
+  }
+.grid-m-col {
+    display: grid;
+    grid-template-columns: var(--grid-m-col);
+    gap: var(--space-l); 
+}
+.grid-s-col {
+    display: grid;
+    grid-template-columns: var(--grid-s-col);
+    gap: var(--space-l); 
+}
 
 input, button, textarea, select {
     font: inherit;
