@@ -8,16 +8,28 @@ function fetchHeader(){
         .then ( data => {
             headerContent = data
             document.querySelector("header").innerHTML = headerContent;
+            menuToggle()  
         }) 
+        
+        
 }
 
 function fetchFooter(){
     console.log("Footer Template fetch initiated")
-    let headerContent
+    let footerContent
     fetch("/Templates/footer.html")
         .then ( response => response.text())
         .then ( data => {
-            headerContent = data
-            document.querySelector("footer").innerHTML = headerContent;
+            footerContent = data
+            document.querySelector("footer").innerHTML = footerContent;
         }) 
+}
+
+function menuToggle() {
+        document.getElementById("nav-btn").addEventListener('click',() =>  {
+        document.getElementById('nav-list').classList.toggle('nav-list--active')
+    }
+    )
+
+
 }
