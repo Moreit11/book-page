@@ -1,3 +1,37 @@
+/* import georgia*/
+
+@font-face {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Georgia Regular'), url('/Fonts/georgia.woff') format('woff');
+    }
+    
+
+    /* @font-face {
+    font-family: 'Georgia Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Georgia Italic'), url('georgiai.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Georgia Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Georgia Bold'), url('georgiab.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Georgia Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Georgia Bold Italic'), url('georgiaz.woff') format('woff'); 
+    }*/
+
+
 :root{
 --brand-peach-pink: #fce9d3 ;
 --brand-chocolate-brown: #47311f;
@@ -15,7 +49,7 @@
 --col-btn-txt: var(--brand-peach-red);
 --col-btn-bg: var(--brand-peach-beige);
     /*Button styles - other*/
-    --btn-border-: 2px solid var(--col-brand--black);
+    --btn-border: 2px solid var(--col-btn-txt);
     --btn-radius: .25rem;
     --btn-padding: 1.25em 2em;
 
@@ -42,8 +76,8 @@
 --fs-h-600: clamp(2.3328rem, 2.0079rem + 1.7327vw, 3.2425rem);
 
 /*Font Styles*/
---ff-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
---ff-titles: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
+--ff-body: "Playfair Display", "Times New Roman", "Arial", "Helvetica", "Verdana", "Tahoma", sans-serif;
+--ff-titles: "Georgia", "Times New Roman", "Arial", "Helvetica", "Verdana", "Tahoma", sans-serif;
 
 /*Spacings*/
 --space-3xs: clamp(0.25rem, 0.25rem + 0vw, 0.25rem);
@@ -68,8 +102,7 @@
 
 
 }
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
 
 input, button, textarea, select {
     font: inherit;
@@ -84,6 +117,16 @@ body{
 h1, h2, h3 , h4, h5, h6 {
     color: var(--col-heading);
     font-family: var(--ff-titles);
+}
+
+h1  {
+    font-size: var(--fs-h-600);
+}
+h2{
+    font-size: var(--fs-h-500);
+}
+h3 {
+    font-size: var(--fs-h-400);
 }
 
 /*Section styles with container*/
@@ -106,12 +149,20 @@ section:has(.container) {
     gap: var(--space-xs);
 }
 
-    .btn {
-    padding: var(--space-3xs) var(--space-s);
-    border: 2px solid red;
+.btn {
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+    border: var(--btn-border);
+    flex: 0 0 ;
     line-height: 1;
     display: flex;
-    }
+}
+a.btn {
+    text-decoration: inherit;
+    color:inherit;
+    border-radius:  inherit;
+
+}
 /*MENU STYLES*/
 .menu {
     list-style: none;
