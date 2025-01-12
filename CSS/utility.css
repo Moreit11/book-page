@@ -1,14 +1,23 @@
 :root{
---brand-peachy-pink: #fce9d3 ;
+--brand-peach-pink: #fce9d3 ;
 --brand-chocolate-brown: #47311f;
---brand-beige: #f8d6af;
---brand-peachy-red: #c95f55;
---brand-peachy-orange: #f4be8e;
---brand-dusty-pink: #e0b3bd; 
+--brand-peach-beige: #f8d6af;
+--brand-peach-red: #c95f55;
+--brand-peach-orange: #f4be8e;
+--brand-dust-pink: #e0b3bd; 
 
+/* COLOURS */
 --col-txt: var(--brand-chocolate-brown) ;
 --col-heading: var(--col-txt) ;
---col-background: var(--brand) ;
+--col-bg: var(--brand-peach-pink) ;
+
+/*Button colors*/
+--col-btn-txt: var(--brand-peach-red);
+--col-btn-bg: var(--brand-peach-beige);
+    /*Button styles - other*/
+    --btn-border-: 2px solid var(--col-brand--black);
+    --btn-radius: .25rem;
+    --btn-padding: 1.25em 2em;
 
 
 --dark-transparent: #47311f90; 
@@ -57,61 +66,70 @@
 --grid-gutter: var(--space-s-l, clamp(0.9375rem, 0.465rem + 2.5199vw, 2.125rem));
 --grid-columns: 12;
 
-/* COLOURS */
---col--bg: hsl(0, 0%, 97.3%);
---col-font: hsl(0, 0%, 20%);
---col-brand--primary: hsl(123, 47%, 33%);
---col-brand--accent: hsl(43, 82%, 56%);
+
 }
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
-    /*       
-          .u-container {
-            max-width: var(--grid-max-width);
-            padding-inline: var(--grid-gutter);
-            margin-inline: auto;
-          }
-          
-          .u-grid {
-            display: grid;
-            gap: var(--grid-gutter);
-        
-    } */
-    
-    /* 6. Inherit fonts for form controls */
-    input, button, textarea, select {
-      font: inherit;
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+body{
+    font-family:var(--ff-body);
+    font-size: var(--fs-b-100);
+    color: var(--col-txt);
+    background: var(--col-background);
+}
+h1, h2, h3 , h4, h5, h6 {
+    color: var(--col-heading);
+    font-family: var(--ff-titles);
+}
+
+/*Section styles with container*/
+section:has(.container) {
+    padding: var(--space-sect--ver) var(--space-sect--hor) ;
+}
+
+    section .container, footer .container, header .container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1150px;
     }
-    
-    body{
-      font-family:var(--ff-body);
-      font-size: var(--fs-b-1);
-      color: var(--col-txt);
-      background: var(--col-background);
+
+
+/*button styles*/
+.btn-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+    .btn {
+    padding: var(--space-3xs) var(--space-s);
+    border: 2px solid red;
+    line-height: 1;
+    display: flex;
     }
-    
-    section:has(.container) {
-      padding: var(--space-sect--ver) var(--space-sect--hor) ;
+/*MENU STYLES*/
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+    .menu li {
+        margin: 0 1.2rem;
     }
-    
-      section .container, footer .container, header .container {
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        max-width: 1150px;
-      }
-    
-    
-    /*button styles*/
-    .btn-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-xs);
-    }
-    
-      .btn {
-        padding: var(--space-3xs) var(--space-s);
-        border: 2px solid red;
-        line-height: 1;
-        display: flex;
-      }
+
+        .menu a {
+            text-decoration: none;
+            color: #222;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: #555;
+        }
