@@ -92,8 +92,10 @@ header .container{
     text-align: center;
     overflow: hidden;
 }
-
-.hero p {
-    font-size: var(--fs-h-300);
-    margin-bottom: 2rem;
-}
+    .hero-content{ 
+        gap: var(--space-m);       
+    }
+    .hero p {
+        font-size: var(--fs-h-300);
+        margin-bottom: 2rem;
+    }
