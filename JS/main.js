@@ -3,7 +3,7 @@
 function fetchHeader(){
     console.log("Header Template fetch initiated")
     let headerContent
-    fetch("Templates/header.html")
+    fetch("/Templates/header.html")
         .then ( response => response.text())
         .then ( data => {
             headerContent = data
@@ -11,10 +11,10 @@ function fetchHeader(){
         }) 
 }
 
-function fetchHeader(){
+function fetchFooter(){
     console.log("Footer Template fetch initiated")
     let headerContent
-    fetch("Templates/footer.html")
+    fetch("/Templates/footer.html")
         .then ( response => response.text())
         .then ( data => {
             headerContent = data
