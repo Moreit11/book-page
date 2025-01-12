@@ -33,7 +33,7 @@
 /* @link https://utopia.fyi/type/calculator?c=300,15,1.2,1140,17,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 /* Font sizes*/
 /* --fs-b-2: clamp(0.651rem, 0.6407rem + 0.0552vw, 0.68rem); */
---fs-b-1: clamp(0.9rem, 0.8rem + 0.131vw, 1.1rem);
+--fs-b-100: clamp(0.9rem, 0.8rem + 0.131vw, 1.1rem);
 --fs-h-100: clamp(0.9375rem, 0.8929rem + 0.2381vw, 1.0625rem);
 --fs-h-200: clamp(1.125rem, 1.0525rem + 0.3869vw, 1.3281rem);
 --fs-h-300: clamp(1.35rem, 1.2392rem + 0.5908vw, 1.6602rem);
@@ -79,7 +79,7 @@ body{
     font-family:var(--ff-body);
     font-size: var(--fs-b-100);
     color: var(--col-txt);
-    background: var(--col-background);
+    background: var(--col-bg);
 }
 h1, h2, h3 , h4, h5, h6 {
     color: var(--col-heading);
@@ -125,11 +125,11 @@ section:has(.container) {
 
         .menu a {
             text-decoration: none;
-            color: #222;
+            color: var(--col-heading);
             font-size: 1rem;
             transition: color 0.3s;
         }
 
         .menu a:hover {
-            color: #555;
+            color: var(--col-txt);
         }
