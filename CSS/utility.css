@@ -118,7 +118,7 @@ html {
 --space-sect--hor: var(--space-xs);
 
 /*Grid styles*/
---grid-l-col: repeat(auto-fit, minmax( min(25rem, 100%) , 1fr));
+--grid-l-col: repeat(auto-fit, minmax( min(10rem, 100%) , 1fr));
 --grid-m-col: repeat(auto-fit, minmax( min(30rem, 100%) , 1fr));
 --grid-s-col: repeat(auto-fit, minmax( min(20rem, 100%) , 1fr));
 

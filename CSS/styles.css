@@ -109,5 +109,50 @@ header .container{
 
     }
         .book__title {
-            
+            text-transform: capitalize;
+            font-size: var(--fs-h-300);
         }
+
+.event-list{ 
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l)
+}
+    .event{ 
+        display: flex;
+        gap: var(--space-m);
+        position: relative;
+        align-items: end;
+    }
+    .event:not(:last-of-type)::after{ 
+        content: '';
+        position: absolute;
+        bottom: calc((var(--space-l)/2)*-1);
+        z-index: 100;
+        left:0;
+        width: 7rem;
+        height: 2px;
+        background: var(--brand-peach-red);
+    }
+        .event__date{ 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+            .event__day{ 
+                font-size: var(--fs-h-300);
+            }
+            .event__month{ 
+                font-size: var(--fs-h-100);
+                text-transform: uppercase;
+            }
+        .event__details {
+            display: flex;
+            flex-direction: column;
+        }
+
+.footer-row--copyright{ 
+    justify-content: center;
+    align-items: center;
+}
