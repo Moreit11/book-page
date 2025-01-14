@@ -187,7 +187,7 @@ section:has(.container), header, footer {
     justify-content: center;
     gap: var(--space-xs);
 }
-    .btn-wrap > * {
+    /* .btn-wrap > * {
         flex-shrink: 0;
     }
 
@@ -202,7 +202,7 @@ section:has(.container), header, footer {
         text-decoration: inherit;
         color:inherit;
         border-radius:  inherit;
-    }
+    } */
 /*MENU STYLES*/
 .nav__list{
     list-style: none;
