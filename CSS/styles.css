@@ -152,6 +152,7 @@ body{
 h1, h2, h3 , h4, h5, h6 {
     color: var(--col-heading);
     font-family: var(--ff-titles);
+    text-transform: capitalize;
 }
 
 h1  {
@@ -325,13 +326,14 @@ header .container{
         .hero p {
             font-size: var(--fs-h-300);
             margin-bottom: 2rem;
+            text-transform: capitalize;
         }
 
 .book-section{ 
 
 }
     .book { 
-
+        cursor: pointer;
     }
         .book__title {
             text-transform: capitalize;
@@ -350,6 +352,7 @@ header .container{
             position: relative;
             align-items: center; /* Vertically center the date and details */
             padding: var(--space-s) 0;
+            cursor: pointer;
         }
         
         .event:not(:last-of-type)::after {
@@ -414,8 +417,276 @@ header .container{
             margin-top: 0.25rem;
         }
         
-        
+/*NEWS PAGE*/
+.section--news {
+    padding: var(--space-l);
+    background-color: var(--col-light-grey);
+}
 
+.section__title {
+    font-size: var(--fs-h-400);
+    color: var(--txt-primary);
+    margin-bottom: var(--space-l);
+    text-align: center;
+}
+
+.main-announcement {
+    display: flex;
+    gap: var(--space-m);
+    background-color: #f0f4f8; /* New background color */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--space-l);
+}
+
+.announcement__image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.announcement__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Limit image size */
+}
+
+.announcement__content {
+    flex: 2;
+    padding: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.announcement__title {
+    font-size: var(--fs-h-500);
+    margin-bottom: var(--space-s);
+    color: var(--txt-primary);
+}
+
+.announcement__body {
+    font-size: var(--fs-h-200);
+    line-height: 1.8;
+    color: var(--txt-secondary);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-m);
+}
+
+.news-item {
+    background: var(--col-white);
+    border: 1px solid var(--col-light-grey);
+    border-radius: 0.5rem;
+    padding: var(--space-m);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Increased box shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.news-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.news-item__title {
+    font-size: var(--fs-h-300);
+    color: var(--txt-primary);
+    margin-bottom: var(--space-s);
+}
+
+.news-item__date {
+    font-size: var(--fs-caption);
+    color: var(--txt-muted);
+    margin-bottom: var(--space-s);
+}
+
+.news-item__summary {
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: var(--txt-secondary);
+}
+
+/* BOOK TOUR.html */
+.section--book-tour {
+    padding: var(--space-l);
+    background-color: var(--col-light-grey);
+}
+
+.section__title {
+    font-size: var(--fs-h-400);
+    color: var(--txt-primary);
+    margin-bottom: var(--space-l);
+    text-align: center;
+}
+
+.tour-description {
+    font-size: var(--fs-h-200);
+    color: var(--txt-secondary);
+    text-align: center;
+    margin-bottom: var(--space-l);
+    line-height: 1.8;
+}
+
+.tour-dates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-m);
+}
+
+.tour-date {
+    background: var(--col-white);
+    border: 1px solid var(--col-light-grey);
+    border-radius: 0.5rem;
+    padding: var(--space-m);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-date:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.tour-location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.location__city {
+    font-size: var(--fs-h-300);
+    font-weight: bold;
+    color: var(--txt-primary);
+    margin-bottom: var(--space-s);
+}
+
+.location__details {
+    font-size: var(--fs-body);
+    color: var(--txt-muted);
+    margin-bottom: var(--space-s);
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--brand-peach-red);
+    color: var(--col-white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: var(--fs-small);
+    margin-left: 1rem;
+    text-transform: uppercase;
+}
+
+.cancelled {
+    margin-top: var(--space-s);
+    background-color: #ff4d4d; /* Red background for cancelled label */
+}
+
+
+
+/*CONVENTION.HTML*/
+/* General Styling */
+.section--convention {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Title Styling */
+.section__title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Description Styling */
+.convention-description {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Ticket Info Box */
+.ticket-info-box {
+    background-color: #fff;
+    padding: var(--space-l);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ticket-info-box p {
+    font-size: var(--fs-h-200);
+    padding: var(--space-3xs);
+}
+
+/* Button Styling */
+.btn-ticket {
+    background-color: var(--brand-peach-red);  /* Brand color */
+    color: #FEFEFE;  /* Off white color */
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    width: 100%;  /* Ensure the button takes the full width of its container */
+    box-sizing: border-box;  /* Prevent padding from affecting the width */
+    cursor: pointer;
+}
+
+.btn-ticket:hover {
+transform: translateY(-4px);}
+
+/* Gallery Section */
+.gallery {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+
+        
+/*FOOTER*/
 .footer-row--copyright{ 
     justify-content: center;
     align-items: center;
